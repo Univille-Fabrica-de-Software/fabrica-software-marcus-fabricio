@@ -12,5 +12,3 @@ Apresentar um resumo das vagas locais e nacionais pesquisadas na disciplina de F
     - CSS 
 
 ## Principais percepções 
-
-Descreva brevemente o que foi observado sobre as exigências do mercado de tecnologia.
