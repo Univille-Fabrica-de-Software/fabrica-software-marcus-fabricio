@@ -556,3 +556,49 @@ footer strong {
 footer .texto-simples {
     color: #94a3b8;
 }
+
+/* responsividade */
+@media (max-width: 1024px) {
+
+    .grid-metricas,
+    .grid-metrica-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-tecnologias,
+    .grid-analise {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+
+    .principal-texto h1 {
+        font-size: 2.2rem;
+    }
+
+    .grid-vagas {
+        grid-template-columns: 1fr;
+    }
+
+    .sintese-card {
+        padding: 32px 20px;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .grid-metricas,
+    .grid-metrica-card {
+        grid-template-columns: 1fr;
+    }
+}
