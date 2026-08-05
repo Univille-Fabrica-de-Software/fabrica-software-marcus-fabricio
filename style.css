@@ -81,7 +81,7 @@ a {
     padding: 80px 0;
 }
 
-/* botao e card */
+/* botoes w cards*/
 .btn,
 .btn-panorama {
     display: inline-flex;
@@ -105,4 +105,454 @@ a {
 .btn-panorama:hover {
     background-color: transparent;
     color: var(--primary-dark);
+}
+
+.btn-green,
+.btn-verde {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-green);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(46, 125, 50, 0.25);
+    transition: var(--transition);
+}
+
+.btn-green:hover,
+.btn-verde:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.35);
+}
+
+.card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.titulo-metricas,
+.titulo-vagas,
+.titulo-tecnologias,
+.titulo-analise {
+    margin-bottom: 40px;
+}
+
+.titulo-metricas h2,
+.titulo-vagas h2,
+.titulo-tecnologias h2,
+.titulo-analise h2 {
+    font-size: 2.2rem;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+}
+
+.titulo-metricas p,
+.titulo-vagas p,
+.titulo-tecnologias p,
+.titulo-analise p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #f1f5f9;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+}
+
+.cabecalho {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo .brand {
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent-green);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.logo .subbrand {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+header nav {
+    display: flex;
+    gap: 32px;
+}
+
+header nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    position: relative;
+    padding: 6px 0;
+    transition: var(--transition);
+}
+
+header nav a:hover {
+    color: var(--accent-green);
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-green);
+    transition: var(--transition);
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* principal */
+.principal-texto {
+    max-width: 800px;
+}
+
+.principal-texto .titulo {
+    display: inline-block;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.principal-texto h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.principal-texto p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    max-width: 650px;
+}
+
+/* metricas */
+.grid-metricas,
+.grid-metrica-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.card-metrica {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+    transition: var(--transition);
+    border: 1px solid rgba(15, 61, 39, 0.04);
+}
+
+.card-metrica:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-metrica h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.card-metrica p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+/* vagas */
+.grid-vagas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.vagas-local,
+.vagas-nacionais {
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--accent-bright);
+    margin-bottom: 24px;
+}
+
+.lista-vagas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card.vaga {
+    border: 1px solid #cbd5e1;
+    background-color: var(--bg-light);
+    padding: 20px;
+}
+
+.card.vaga:hover {
+    background-color: #fff;
+    border-color: var(--accent-bright);
+}
+
+.cabecalho-vaga {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.cabecalho-vaga h4 {
+    font-size: 1.1rem;
+}
+
+.tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.tag-orange {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.tag-green {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.tag-blue {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.tags span {
+    background-color: #fff;
+    border: 1px solid #cbd5e1;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.card.vaga:hover .tags span {
+    background-color: #f1f5f9;
+}
+
+.skill {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-title);
+}
+
+/* tecno */
+.grid-tecnologias {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.subtitulo-tecnologias {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+}
+
+.tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags-cloud span {
+    background-color: #fff;
+    border: 1px solid #cbd5e1;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: var(--transition);
+}
+
+.tags-cloud span:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+    box-shadow: var(--shadow);
+}
+
+.card.tecnologias {
+    padding: 32px;
+}
+
+.tecnologias-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tecnologias-item label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-title);
+    margin-bottom: 6px;
+}
+
+.bar-bg {
+    height: 8px;
+    background-color: #f1f5f9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: var(--accent-bright);
+    border-radius: 4px;
+}
+
+/* analise */
+.grid-analise {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card.analise {
+    border: 1px solid #cbd5e1;
+}
+
+.card.analise:nth-child(1) {
+    border-top: 4px solid var(--accent-bright);
+}
+
+.card.analise:nth-child(2) {
+    border-top: 4px solid var(--primary-dark);
+}
+
+.card.analise:nth-child(3) {
+    border-top: 4px solid #cbd5e1;
+}
+
+.card.analise h3 {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+}
+
+.card.analise p {
+    font-size: 0.95rem;
+}
+
+/* sintesse */
+.sintese-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.sintese-card h2 {
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 16px;
+}
+
+.sintese-card p {
+    font-size: 1.05rem;
+    max-width: 760px;
+    margin: 0 auto 32px;
+}
+
+.dashed-box {
+    background-color: var(--bg-light);
+    border: 2px dashed #cbd5e1;
+    padding: 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* roda */
+footer {
+    background-color: var(--primary-deep);
+    color: #f8fafc;
+    padding: 40px 0;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer strong {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+footer .texto-simples {
+    color: #94a3b8;
 }
