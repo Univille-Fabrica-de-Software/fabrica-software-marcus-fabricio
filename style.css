@@ -52,3 +52,16 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.container,
+.container-principal,
+.container-metricas,
+.container-vagas,
+.container-tecnologias,
+.container-analise,
+.container-sintese,
+.container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
